@@ -12,7 +12,13 @@ const changeBtn = document.querySelector(".change-color");
 
 changeBtn.addEventListener("click", changeColor);
 
+// function changeColor() {
+//   body.style.backgroundColor = getRandomHexColor();
+//   color.textContent = getRandomHexColor();
+// }
+
 function changeColor() {
-  body.style.backgroundColor = getRandomHexColor();
-  color.textContent = getRandomHexColor();
+  const newColor = getRandomHexColor(); // Отримуємо колір один раз та зберігаємо його
+  body.style.backgroundColor = newColor;
+  color.textContent = newColor; // Використовуємо вже збережене значення
 }
